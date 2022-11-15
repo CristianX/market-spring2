@@ -1,10 +1,13 @@
 package com.platzi.platzimarket.persistence.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,7 +25,10 @@ public class Cliente {
     private String direccion;
 
     @Column(name = "correo_electronico")
-    private String email;
+    private String correoElectronico;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Compra> compras;
 
     public Integer getIdCliente() {
         return this.idCliente;
@@ -64,12 +70,12 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public String getEmail() {
-        return this.email;
+    public String getcorreoElectronico() {
+        return this.correoElectronico;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setcorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
     }
 
 }
