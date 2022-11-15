@@ -1,6 +1,5 @@
 package com.platzi.platzimarket.persistence.entity;
 
-import java.sql.Date;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -29,8 +28,6 @@ public class Compra {
 
     private String comentario;
     private String estado;
-
-
 
     public Integer getIdCompra() {
         return this.idCompra;
