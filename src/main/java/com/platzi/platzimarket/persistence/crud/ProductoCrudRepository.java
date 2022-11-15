@@ -3,7 +3,6 @@ package com.platzi.platzimarket.persistence.crud;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.platzi.platzimarket.persistence.entity.Producto;
