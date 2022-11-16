@@ -38,7 +38,6 @@ public class Producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-
     public Integer getIdProducto() {
         return this.idProducto;
     }
@@ -99,5 +98,12 @@ public class Producto {
         this.estado = estado;
     }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
 }
